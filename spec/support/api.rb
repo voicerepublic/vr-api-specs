@@ -5,6 +5,35 @@ module API
 
   extend self
 
+  TALK_FIELDS = %w( id
+                    title
+                    venue_id
+                    starts_at
+                    ends_at
+                    ended_at
+                    collect
+                    created_at
+                    updated_at
+                    teaser
+                    description
+                    duration
+                    image_uid
+                    featured_from
+                    state
+                    started_at
+                    processed_at
+                    play_count
+                    starts_at_date
+                    starts_at_time
+                    uri
+                    recording_override
+                    related_talk_id
+                    grade
+                    language
+                    slug
+                    format
+                    speakers )
+
   def get(resource)
     HTTParty.get(url(resource))
   end

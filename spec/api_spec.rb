@@ -4,7 +4,11 @@ require File.expand_path(File.join(%w(.. support api)), __FILE__)
 
 describe API do
 
-  context 'talks' do
+  pending 'POST sessions'
+
+  pending 'POST uploads'
+
+  context 'GET talks' do
 
     let(:response) { API.get('/talks?limit=1') }
 
@@ -22,40 +26,15 @@ describe API do
       expect(data.size).to eq(1)
     end
 
-    it 'should have the documented fields' do
-      fields = %w( id
-                   title
-                   venue_id
-                   starts_at
-                   ends_at
-                   ended_at
-                   collect
-                   created_at
-                   updated_at
-                   teaser
-                   description
-                   duration
-                   image_uid
-                   featured_from
-                   state
-                   started_at
-                   processed_at
-                   play_count
-                   starts_at_date
-                   starts_at_time
-                   uri
-                   recording_override
-                   related_talk_id
-                   grade
-                   language
-                   slug
-                   format
-                   speakers )
+    it 'should have all documented fields' do
       data = JSON.parse(response.body)
-      expect(data.first.keys - fields).to be_empty
-      expect(fields - data.first.keys).to be_empty
+      expect(API::TALK_FIELDS - data.first.keys).to be_empty
+    end
+
+    it 'should not have any undocumented fields' do
+      data = JSON.parse(response.body)
+      expect(data.first.keys - API::TALK_FIELDS).to be_empty
     end
 
   end
-
 end
