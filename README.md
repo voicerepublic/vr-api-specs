@@ -1,15 +1,14 @@
                             _
-    __   ___ __  __ _ _ __ (_)    ___ _ __   ___  ___
-    \ \ / / '__|/ _` | '_ \| |   / __| '_ \ / _ \/ __|
-     \ V /| |  | (_| | |_) | |   \__ \ |_) |  __/ (__
-      \_/ |_|___\__,_| .__/|_|___|___/ .__/ \___|\___|
+    __   ___ __  __ _ _ __ (_)    ___ _ __   ___  ___ ___
+    \ \ / / '__|/ _` | '_ \| |   / __| '_ \ / _ \/ __/ __|
+     \ V /| |  | (_| | |_) | |   \__ \ |_) |  __/ (__\__ \
+      \_/ |_|___\__,_| .__/|_|___|___/ .__/ \___|\___|___/
            |_____|   |_|    |_____|  |_|
 
-Welcome to vr_api_spec
-======================
+Welcome to vr_api_specs
+=======================
 
-vr_api_spec is a test suite in RSpec to test the Voice Republic REST
-API.
+vr_api_specs is an rspec test suite to test the public REST API of Voice Republic.
 
 Setup
 -----
