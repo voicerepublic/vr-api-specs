@@ -6,6 +6,8 @@ describe API do
 
   pending 'POST sessions'
 
+  pending 'GET bookmarks'
+
   pending 'POST uploads'
 
   context 'GET talks' do
