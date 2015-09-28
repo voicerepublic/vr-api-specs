@@ -16,8 +16,8 @@ module API
                     updated_at
                     teaser
                     description
+                    description_as_html
                     duration
-                    image_uid
                     featured_from
                     state
                     started_at
@@ -26,13 +26,11 @@ module API
                     starts_at_date
                     starts_at_time
                     uri
-                    recording_override
                     related_talk_id
-                    grade
                     language
                     slug
-                    format
-                    speakers )
+                    speakers
+                    popularity )
 
   def get(resource)
     HTTParty.get(url(resource))
@@ -57,7 +55,7 @@ module API
   end
 
   def env
-    @env ||= ENV['SPEC_ENV'] || 'staging'
+    @env ||= ENV['SPEC_ENV'] || 'development'
   end
 
   def config
